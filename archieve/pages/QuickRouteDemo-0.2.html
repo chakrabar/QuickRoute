@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<meta name="dcterms.rightsHolder" content="Arghya C | https://github.com/chakrabar">
+		<meta name="dcterms.dateCopyrighted" content="2015">
+		<title>ROUTE</title>
+		 <!--<script src="https://code.jquery.com/jquery-1.11.3.js"></script>#### THIS IS REQUIRED ####-->
+		<script type="text/javascript" src="singlePageRoute.js"></script> <!--#### THIS IS REQUIRED ####-->
+		<script> <!--#### add your routes and initialize ####-->
+			//$( document ).ready(function() {
+				router.add('home', '_home.html', 'ROUTE : Home');
+				router.add({'hash':'about', 'view':'_about.html', 'title':'ROUTE : About'}); //'about', '_about.html', 'ROUTE : About'
+				router.add('careers', '_careers.html');
+				router.add('na', '_notYetCreated.html');
+				router.init('thisIsTheViewHolder', false);
+			//});
+		</script>
+	</head>
+	<body>
+		<div style="background-color:blue; padding: 20px; font-family:Tahoma;"> <!--just to add a simple header & menu -->
+			<span style="color:black; font-size: 1.2em;">
+				<strong>Welcome to the 'Single Page Route' demo</strong>
+			</span>
+			<br/>
+			<span style="font-size:0.8em; color:#fff !important; float:right;"> 
+				<a href="#home">Home<a> &nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="#about">About<a> &nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="#careers">Careers<a> &nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="#na">NA<a>
+			</span>
+		</div>
+		<div id="thisIsTheViewHolder">View loads here...</div> <!--#### THIS IS REQUIRED ####-->
+	</body>
+</html>
