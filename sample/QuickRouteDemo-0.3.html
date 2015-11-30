@@ -3,15 +3,16 @@
 		<meta name="dcterms.rightsHolder" content="Arghya C | https://github.com/chakrabar">
 		<meta name="dcterms.dateCopyrighted" content="2015">
 		<title>QuickRoute</title> <!--#### this will be used as default route ####-->
-		 <!--<script src="https://code.jquery.com/jquery-1.11.3.js"></script> <!--#### this is OPTIONAL, QuickRoute will get it ;) ####-->
-		<script type="text/javascript" src="quickRoute-0.7.min.js"></script> <!--#### this is REQUIRED, obviously! ####-->
-		<script> <!--#### add your routes and initialize ####-->
+		<!--<script src="https://code.jquery.com/jquery-1.11.3.js"></script> <!--#### this is OPTIONAL, QuickRoute will get it ;) ####-->
+		<script type="text/javascript" src="quickRoute-latest.js"></script> <!--#### this is REQUIRED, obviously! ####-->
+		<!--<script src="https://raw.githubusercontent.com/chakrabar/QuickRoute/master/quickRoute-0.7.min.js"></script>-->
+		<script> //<!--#### add your routes and initialize ####-->
 			//$(document).ready(function() { <!--#### wrap this code in document ready, IF you already have jQuery ####-->
-			router.add('home', 'views/_home.html', 'ROUTE : Home'); <!--#### adding route as hash, view, title ####-->
-			router.add({'hash':'about', 'view':'views/_about.html', 'title':'ROUTE : About'}); <!--#### adding route as object ####-->
-			router.add('careers', 'views/_careers.html'); <!--#### adding route without title (will use default) ####-->
-			router.add('na', 'views/_notThere.html'); <!--#### does not exist yet ####-->
-			router.init('thisIsTheViewHolder', false); <!--#### view holder id, false: views are not embedded ####-->
+			router.add('home', 'views/_home.html', 'ROUTE : Home'); //<!--#### adding route as hash, view, title ####-->
+			router.add({'hash':'about', 'view':'views/_about.html', 'title':'ROUTE : About'}); //<!--#### adding route as object ####-->
+			router.add('careers', 'views/_careers.html'); //<!--#### adding route without title (will use default) ####-->
+			router.add('na', 'views/_notThere.html'); //<!--#### does not exist yet ####-->
+			router.init('thisIsTheViewHolder'); //<!--#### view holder id, false: views are not embedded ####-->
 			//});
 		</script>
 	</head>
