@@ -10,6 +10,7 @@ a {
 }
 a:hover {
 	text-shadow: none;
+	text-decoration: none;
 }
 .links {
 	font-size:0.8em;
@@ -46,6 +47,8 @@ a:hover {
 .code {
 	background-color: midnightblue;
 	color: lightgray;
+	/*background-color: black;
+	color: coral;*/
 	font-family: consolas;
 	margin: 10px;
 	padding: 10px;
