@@ -1,4 +1,4 @@
-/*! quickRoute v0.8 | (c) 2015 Arghya C | https://github.com/chakrabar */
+/*! quickRoute lite v0.8 | (c) 2015 Arghya C | https://github.com/chakrabar */
 var router = (function() {
 	var routes = [];
 	var viewContentHolder = '';
@@ -9,34 +9,6 @@ var router = (function() {
 	function hasValue(obj) {
 		return (typeof obj !== 'undefined' && obj != null && obj.length != 0);
 	}
-	function where(arr, propertyName, value) {
-		if (!hasValue(arr))
-			return null;
-		for (var i = 0; i < arr.length; i++) {
-			if (arr[i].hasOwnProperty(propertyName) && arr[i][propertyName] == value) //hasOwnProperty propertyName in arr[i]
-				return arr[i];
-		}
-		return null;
-	}
-	function findIndex(arr, propertyName, value) {
-		if (!hasValue(arr))
-			return -1;
-		for (var i = 0; i < arr.length; i++) {
-			if (arr[i].hasOwnProperty(propertyName) && arr[i][propertyName] == value) //hasOwnProperty propertyName in arr[i]
-				return i;
-		}
-		return -1;
-	}
-	function removeItem(arr, propertyName, value) {
-		if (!hasValue(arr))
-			return;
-		var itemIndex = findIndex(arr, propertyName, value);
-		if (itemIndex >= 0)
-			arr.splice(itemIndex, 1);		
-	}
-	function contains(str, search) {
-		return typeof str === 'string' && str.indexOf(search) >= 0;
-	}	
 	function logException (ex) {
 		if (window.console) {
 			var logMsg = '';
@@ -117,19 +89,6 @@ var router = (function() {
 				routes.push(key);
 			else
 				throw new TypeError('Invalid route configuration passed to add.');
-		},
-		get: function(key) {
-			return where(routes, 'hash', key);
-		},
-		update: function(key, view, title) {
-			var route = where(routes, 'hash', key);
-			if (route != null) {
-				route.view = view;
-				route.title = title;
-			}
-		},
-		remove: function(key) {
-			removeItem(routes, 'hash', key);
 		},
 		init: function(viewContainerId, isLocalView) {
 			if (typeof viewContainerId === 'string')

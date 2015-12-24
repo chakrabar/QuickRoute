@@ -54,3 +54,10 @@ a:hover {
 	padding: 10px;
 	overflow: auto;
 }
+
+.inline-code {
+	background-color: #2d61a6;
+	color: #ffffff;
+	padding: 5px;
+	font-weight: 200;
+}
